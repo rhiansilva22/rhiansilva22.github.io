@@ -1,0 +1,467 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+/* Header and Navigation bar */
+
+#main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(48, 0, 101, 0.95);
+    width: 100%;
+    padding: 1.25rem 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Honk';
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    color: #FFFFFF;
+}
+
+.nav-links a:hover {
+    color: #FFE164;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    .logo {
+        font-size: 2.25rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        width: 80%;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 405px) {
+    .nav-links .logo span {
+        display: none;
+    }
+
+    .nav-links {
+        padding: .75rem;
+    }
+}
+
+/* Banner */
+
+.banner {
+    background-image: url('../img/background-3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 46.35rem;
+}
+
+.welcome {
+    position: relative;
+    top: 6rem;
+    width: 83.5%;
+    margin: 8rem auto;
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: 3.95rem;
+    font-weight: 900;
+    padding-bottom: 2.25rem;
+}
+
+.welcome h1 span {
+    font-family: 'Honk';
+    font-size: 5.7rem;
+    letter-spacing: .2rem;
+}
+
+.welcome p {
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+    padding-bottom: 3rem;
+}
+
+.welcome p span {
+    color: rgb(48, 0, 101);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1200px) {
+    .welcome {
+        top: 6.5rem;
+    }
+
+    .welcome h1 {
+        font-size: 3.35rem;
+    }
+
+    .welcome h1 span {
+        font-size: 4.75rem;
+    }
+
+    .welcome p {
+        font-size: 1.15rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .welcome {
+        top: 1.5rem;
+    }
+
+    .welcome p {
+        padding-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 405px) {
+    .welcome p {
+        font-size: 1rem;
+    }
+
+    .welcome h1 {
+        font-size: 3rem;
+    }
+
+    .welcome h1 span {
+        font-size: 4rem;
+    }
+}
+
+/* Button */
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border-width: .2rem;
+    border-radius: .3rem;
+    padding: .7rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+button {
+    background-color: #FFE164;
+    color: #5E006F;
+}
+
+button:hover {
+    background-color: #FF40AF;
+    color: #FFE164;
+}
+
+button:active {
+    font-size: .96rem;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: rgb(73, 0, 150);
+}
+
+/* Main Section */
+
+#content {
+    padding: 3rem 0;
+    background-color: #5E006F;
+}
+
+section {
+    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+}
+
+.community {
+    display: flex;
+    flex-direction: row;
+}
+
+.community-banner h2 {
+    background-image: url('../img/community.png');
+    background-size: cover;
+    background-position: center;
+    width: 33rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: .5rem;
+}
+
+.community p {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    background: linear-gradient(to right, #FFFFB2, #FF865D, #FF40AF);
+    color: #300065;
+    padding: 1rem 1rem 1rem 2rem;
+    line-height: 1.6rem;
+}
+
+.rounded {
+    border-top: 1px solid #FFFFFF;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.events {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.events-banner h2 {
+    background-image: url('../img/events.png');
+    background-size: cover;
+    background-position: center;
+    width: 33rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: .5rem;
+}
+
+.events p {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 1rem 2rem 1rem 1rem;
+    background: linear-gradient(to left, #FFFFB2, #FF865D, #FF40AF);
+    color: #300065;
+    text-align: right;
+    line-height: 1.6rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .community-banner h2,
+    .events-banner h2 {
+        width: 30rem;
+        height: 22rem;
+    }
+
+    .community p {
+        line-height: 1.4rem;
+        text-align: left;
+    }  
+    
+    .events p {
+        line-height: 1.4rem;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .community-banner h2,
+    .events-banner h2 {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .community, .events {
+        flex-direction: column;
+    }
+
+    .community p,
+    .events p {
+        padding: 1rem;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .community-banner h2,
+    .events-banner h2 {
+        font-size: 1.70rem;
+        letter-spacing: .25rem;
+        text-align: center;
+    }
+}
+
+/* Newsletter */
+
+#newsletter {
+    display: flex;
+    justify-content: center;
+    background-color: #300065;
+    color: #FFFFFF;
+    padding: 4rem 0;
+}
+
+.newsletter {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    padding-bottom: 3rem;
+}
+
+.newsletter span {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+    font-style: italic;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    letter-spacing: .1rem;
+    color: #FF40AF;
+    padding: .2rem;
+}
+
+/* Form container */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+/* Input containers */
+.input-container {
+    flex-grow: 1;
+    flex-basis: calc(33.333% - 2rem); /* each input occupies 1/3 of the line */
+}
+
+input {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+    border: 2px solid #8a01a2;
+    border-radius: 3px;
+    box-shadow: inset 1px 1px 3px 0 rgba(143, 154, 159, 0.6);
+    height: 2.2rem;
+    padding: 0.625rem;
+    transition: border-color 0.5s ease;
+    width: 83.5%;
+}
+
+label {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Button */
+.newsletter button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border-width: .2rem;
+    background-color: #FFE164;
+    color: #5E006F;
+    border-radius: .3rem;
+    padding: .7rem 1.5rem;
+    margin: 1.5rem;
+    text-transform: uppercase;
+}
+
+.newsletter button:hover {
+    background-color: #FF40AF;
+    color: #FFE164;
+}
+
+.newsletter button:active {
+    font-size: .96rem;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: rgb(73, 0, 150);
+}
+
+@media only screen and (max-width: 550px) {
+    .newsletter span {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Footer */
+
+footer {
+    background-color: #5E006F;
+    padding: 2rem;
+    color: #FFFFFF;
+    text-align: center;
+    letter-spacing: .075rem;
+}
+
+footer h1 {
+    font-family: 'Honk';
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+.copyright .creator {
+    font-size: .75rem;
+    font-weight: 300;
+    text-transform: lowercase;
+    color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 1.5rem;
+}
